@@ -15,7 +15,7 @@
                 posted {{$blog->created_at->diffForHumans()}}
              </p>
 
-             <a href ="{{route('blog_path' ,['blog'=>$blog->id])}}" class="btn btn-outline-primary">View Post</a>
+             <a href ="{{route('blogs_path' ,['blog'=>$blog->id])}}" class="btn btn-outline-primary">View Post</a>
          </div>
      </div>
  </div>
