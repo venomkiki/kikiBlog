@@ -76,9 +76,7 @@
                     @endauth
                 </div>
             @endif
-             <div class="container">
-                 <img src="" height="250" width="300" class="img-responsive"/>
-             </div>
+
             <div class="content">
                 <div class="title m-b-md">
                     <h3>Welcome to kikiBlog</h3>
