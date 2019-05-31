@@ -17,7 +17,7 @@ deploy:
   provider: pages
   github_token: e5370e7aa4633def2fb402a227e8bfe4355f5808
   on:
-     branch: master
+     branch: dev
 
 
 
