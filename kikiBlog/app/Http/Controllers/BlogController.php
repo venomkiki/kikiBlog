@@ -38,6 +38,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request);
         $blog = new Blog;
 
         $blog->title =   $request->title;
@@ -87,7 +88,7 @@ class BlogController extends Controller
         $blog = Blog::find($id);
 
         $blog->title = $request->title;
-        $blog->content =$request-> content;
+        $blog->content =$request->content;
 
         $blog->update();
 
