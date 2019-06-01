@@ -5,7 +5,6 @@
         <div class="container">
             <img src="" alt="WEL" width="500" height="600">
             <h1>WElcome to MyBlog!!</h1>
-
         </div>
     </div>
 </div>
