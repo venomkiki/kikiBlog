@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 webdev/
+web: vendor/bin/heroku-php-apache2 resources/
