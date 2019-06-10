@@ -30,17 +30,17 @@ class BlogTest extends TestCase
         $this->assertEquals('is the best player',$post->content);
     }
 
-//    public function updating_post()
-//    {
-//        $post = Posts::update(['id'=>'1','title'=>'fifa','content'=>'messi']);
-//        $post->title = "fifa";
-//        $post->content = "messi is a goat";
-//        $this->put('/Blogs/'.$post->id);
-//        $this->assertDatabaseHas('blogs',['id'=> $post->id , 'title' => 'fifa', 'content' => 'messi']);
-//        $res = $this->get('/Blogs');
-//        $res->assertSee($post->title);
-//        $res->assertSee('messi', $post->content);
-//    }
+    public function updating_post()
+    {
+        $post = Posts::update(['id'=>'1','title'=>'fifa','content'=>'messi']);
+        $post->title = "fifa";
+        $post->content = "messi is a goat";
+        $this->put('/Blogs/'.$post->id);
+        $this->assertDatabaseHas('blogs',['id'=> $post->id , 'title' => 'fifa', 'content' => 'messi']);
+        $res = $this->get('/Blogs');
+        $res->assertSee($post->title);
+        $res->assertSee('messi', $post->content);
+    }
 
 
 
