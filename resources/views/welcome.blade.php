@@ -4,7 +4,7 @@
     <div class="section">
         <div class="container">
 
-            <h1>WElcome to MyBlog!!</h1>
+            <h1>Welcome to myBlog!!</h1>
             <br>
             <p class="">
                 KikiBlog is a simple application built to allow anyone to create content and share it with rest of the world!!
