@@ -1,6 +1,14 @@
+
 <?php
-$DATABASE_URL=parse_url(' postgres://ircmevqbsqugnt:576087d56df4ecb4d88d3957196d9e959fa915875a8730527773f05b3b37d825@ec2-54-83-36-37.compute-1.amazonaws.com:5432/d68prno7u9uavv
-');
+//$DATABASE_URL=parse_url(' postgres://ircmevqbsqugnt:576087d56df4ecb4d88d3957196d9e959fa915875a8730527773f05b3b37d825@ec2-54-83-36-37.compute-1.amazonaws.com:5432/d68prno7u9uavv
+//');
+
+$url = parse_url(getenv("DATABASE_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
 return [
 
     /*
@@ -55,18 +63,18 @@ return [
             'engine' => null,
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'require',
-        ],
+//
+        'pgsql' => array(
+            'driver'   => 'pgsql',
+            'host'     => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ),
+
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
