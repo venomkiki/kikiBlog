@@ -38,7 +38,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        
         $blog = new Blog;
 
         $blog->title =   $request->title;
