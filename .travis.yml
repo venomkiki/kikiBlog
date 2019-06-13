@@ -3,9 +3,12 @@ language: php
 php:
   - 7.3.1
 
+services:
+ - postgresql
+
 before_script:
   - cp .env.travis .env
-  - psql -e 'create database homestead_test;'
+  - psql -c "CREATE DATABASE homestead_test;" -U postgres
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
