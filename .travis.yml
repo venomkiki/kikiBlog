@@ -4,11 +4,11 @@ php:
   - 7.3.1
 
 services:
- - postgresql
+ - mysql
 
 before_script:
   - cp .env.travis .env
-  - psql -c "CREATE DATABASE homestead_test;" -U postgres
+  - mysql -e 'create database testing_db;'
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
