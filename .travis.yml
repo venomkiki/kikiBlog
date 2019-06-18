@@ -17,12 +17,12 @@ script:
   - vendor/bin/phpunit
 
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-     branch: master
+#deploy:
+#  provider: heroku
+#  skip-cleanup: true
+#  github_token: $GITHUB_TOKEN
+#  on:
+#     branch: master
 
 
 
